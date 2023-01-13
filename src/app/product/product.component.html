@@ -1,0 +1,47 @@
+<div>
+
+    <h1> Products Service in MEAN APP </h1>
+
+    <button (click)="clickProducts()"> GET ALL PRODUCTS</button>
+
+
+
+    <hr />
+
+    <table style="border: solid red 5px">
+
+        <thead>
+
+            <th>PROD ID</th>
+
+            <th>PROD NAME</th>
+
+            <th>PROD PRICE</th>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let prod of productsResult">
+
+                <td>{{prod.pid}}</td>
+
+                <td>{{prod.pname}}</td>
+
+                <td>{{prod.price}}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <hr />
+
+
+
+    Enter productname : <input type="text" [(ngModel)]="prodname" ngModel />
+
+    <button (click)="getProdByName()">GETPRODBYNAME</button>
+
+</div>
